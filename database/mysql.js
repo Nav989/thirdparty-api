@@ -20,7 +20,12 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.User = require('../model/schema')(sequelize, DataTypes);
-db.movieData=require('../model/movieSchema')(sequelize, DataTypes);
+
+db.User = require('../models/RegisterSchema')(sequelize, DataTypes);
+db.Book = require('../models/bookListSchema')(sequelize, DataTypes);
+db.otp = require('../models/otpSchema')(sequelize, DataTypes);
+db.userbook = require('../models/user_book_schema')(sequelize, DataTypes);
+
+
 
 module.exports=db
