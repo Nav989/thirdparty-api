@@ -21,10 +21,11 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 
-db.User = require('../models/RegisterSchema')(sequelize, DataTypes);
-db.Book = require('../models/bookListSchema')(sequelize, DataTypes);
-db.otp = require('../models/otpSchema')(sequelize, DataTypes);
-db.userbook = require('../models/user_book_schema')(sequelize, DataTypes);
+db.archeive=require('../model/archieveSchema')(sequelize, DataTypes);
+db.books=require('../model/booksSchema')(sequelize, DataTypes);
+db.populer=require('../model/mostpopularSchema')(sequelize, DataTypes);
+db.movieData=require('../model/movieSchema')(sequelize, DataTypes);
+
 
 
 
